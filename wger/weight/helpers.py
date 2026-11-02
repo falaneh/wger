@@ -25,7 +25,10 @@ import logging
 from django.utils.timezone import make_aware
 
 # wger
-from wger.weight.models import WeightEntry
+from wger.weight.models import (
+    MIN_WEIGHT,
+    WeightEntry,
+)
 
 
 logger = logging.getLogger(__name__)
@@ -62,7 +65,7 @@ def parse_weight_csv(request, cleaned_data):
             # there is no existing weight entry in the database for that date
             unique_in_db = not duplicate_date_in_db
 
-            if unique_among_csv and unique_in_db and parsed_weight >= 30:
+            if unique_among_csv and unique_in_db and parsed_weight >= MIN_WEIGHT:
                 distinct_weight_entries.append((parsed_date, parsed_weight))
                 entry_dates.add(parsed_date)
             else:
