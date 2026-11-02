@@ -1,0 +1,26 @@
+Found 4 test(s).
+Creating test database for alias 'default'...
+
+
+F...
+======================================================================
+FAIL: test_blank_lines_are_ignored (wger.weight.tests.test_ptoss2_tdd.WeightCsvTddTestCase.test_blank_lines_are_ignored)
+Uma linha em branco no meio do arquivo nao e um erro do usuario
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/saied/Desktop/trabalho/wger/wger/weight/tests/test_ptoss2_tdd.py", line 64, in test_blank_lines_are_ignored
+    self.assertEqual(errors, [])
+AssertionError: Lists differ: [[]] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+[]
+
+- [[]]
++ []
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.603s
+
+FAILED (failures=1)
+Destroying test database for alias 'default'...

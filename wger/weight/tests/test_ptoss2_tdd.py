@@ -56,3 +56,9 @@ class WeightCsvTddTestCase(WgerTestCase):
         weights, errors = self.parse(rows)
         self.assertEqual(len(weights), 1000)
         self.assertEqual(errors, [])
+
+    def test_blank_lines_are_ignored(self):
+        """Uma linha em branco no meio do arquivo nao e um erro do usuario"""
+        weights, errors = self.parse('2031-01-01,80\n\n2031-01-02,81\n')
+        self.assertEqual(len(weights), 2)
+        self.assertEqual(errors, [])
