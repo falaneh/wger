@@ -40,9 +40,12 @@ MAX_ROW_COUNT = 1000
 
 def parse_weight_csv(request, cleaned_data):
     try:
-        dialect = csv.Sniffer().sniff(cleaned_data['csv_input'])
+        dialect = csv.Sniffer().sniff(cleaned_data['csv_input'], delimiters=';\t')
     except csv.Error:
-        dialect = 'excel'
+        try:
+            dialect = csv.Sniffer().sniff(cleaned_data['csv_input'])
+        except csv.Error:
+            dialect = 'excel'
 
     # csv.reader expects a file-like object, so use StringIO
     parsed_csv = csv.reader(io.StringIO(cleaned_data['csv_input']), dialect)
