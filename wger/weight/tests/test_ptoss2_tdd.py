@@ -62,3 +62,15 @@ class WeightCsvTddTestCase(WgerTestCase):
         weights, errors = self.parse('2031-01-01,80\n\n2031-01-02,81\n')
         self.assertEqual(len(weights), 2)
         self.assertEqual(errors, [])
+
+    def test_semicolon_separator_with_decimal_comma(self):
+        """Formato comum no Brasil: o separador nao pode ser a virgula do decimal"""
+        weights, errors = self.parse('2031-01-01;80,5\n2031-01-02;81,5')
+        self.assertEqual([w.weight for w in weights], [Decimal('80.5'), Decimal('81.5')])
+        self.assertEqual(errors, [])
+
+    def test_tab_separator_with_decimal_comma(self):
+        """Exportacao de planilha: tabulacao com decimal em virgula"""
+        weights, errors = self.parse('2031-01-01\t80,5\n2031-01-02\t81,5')
+        self.assertEqual([w.weight for w in weights], [Decimal('80.5'), Decimal('81.5')])
+        self.assertEqual(errors, [])

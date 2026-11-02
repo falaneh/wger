@@ -1,0 +1,42 @@
+Found 6 test(s).
+Creating test database for alias 'default'...
+
+
+..FF..
+======================================================================
+FAIL: test_semicolon_separator_with_decimal_comma (wger.weight.tests.test_ptoss2_tdd.WeightCsvTddTestCase.test_semicolon_separator_with_decimal_comma)
+Formato comum no Brasil: o separador nao pode ser a virgula do decimal
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/saied/Desktop/trabalho/wger/wger/weight/tests/test_ptoss2_tdd.py", line 69, in test_semicolon_separator_with_decimal_comma
+    self.assertEqual([w.weight for w in weights], [Decimal('80.5'), Decimal('81.5')])
+AssertionError: Lists differ: [] != [Decimal('80.5'), Decimal('81.5')]
+
+Second list contains 2 additional elements.
+First extra element 0:
+Decimal('80.5')
+
+- []
++ [Decimal('80.5'), Decimal('81.5')]
+
+======================================================================
+FAIL: test_tab_separator_with_decimal_comma (wger.weight.tests.test_ptoss2_tdd.WeightCsvTddTestCase.test_tab_separator_with_decimal_comma)
+Exportacao de planilha: tabulacao com decimal em virgula
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/saied/Desktop/trabalho/wger/wger/weight/tests/test_ptoss2_tdd.py", line 75, in test_tab_separator_with_decimal_comma
+    self.assertEqual([w.weight for w in weights], [Decimal('80.5'), Decimal('81.5')])
+AssertionError: Lists differ: [] != [Decimal('80.5'), Decimal('81.5')]
+
+Second list contains 2 additional elements.
+First extra element 0:
+Decimal('80.5')
+
+- []
++ [Decimal('80.5'), Decimal('81.5')]
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.604s
+
+FAILED (failures=2)
+Destroying test database for alias 'default'...
