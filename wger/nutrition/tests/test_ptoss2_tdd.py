@@ -30,3 +30,8 @@ class IngredientValidationTddTestCase(SimpleTestCase):
         """Nao existe quantidade negativa de um nutriente"""
         with self.assertRaisesRegex(ValueError, 'negative'):
             make_data(sodium=-1).sanity_checks()
+
+    def test_negative_energy_is_rejected(self):
+        """-1 kcal passava: declarada e calculada ficam abaixo do minimo de 13 kcal"""
+        with self.assertRaisesRegex(ValueError, 'negative'):
+            make_data(energy=-1, protein=0.0).sanity_checks()
