@@ -30,6 +30,7 @@ from wger.utils.uuid import uuid7
 
 
 MIN_WEIGHT = Decimal(30)
+MAX_WEIGHT = Decimal(600)
 
 
 class WeightEntry(models.Model):
@@ -49,7 +50,7 @@ class WeightEntry(models.Model):
         verbose_name='Weight',
         max_digits=5,
         decimal_places=2,
-        validators=[MinValueValidator(MIN_WEIGHT), MaxValueValidator(Decimal(600))],
+        validators=[MinValueValidator(MIN_WEIGHT), MaxValueValidator(MAX_WEIGHT)],
     )
 
     user = models.ForeignKey(
