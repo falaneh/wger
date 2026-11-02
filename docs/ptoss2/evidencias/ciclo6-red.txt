@@ -1,0 +1,17 @@
+Found 1 test(s).
+
+
+F
+======================================================================
+FAIL: test_negative_macro_is_rejected (wger.nutrition.tests.test_ptoss2_tdd.IngredientValidationTddTestCase.test_negative_macro_is_rejected)
+Nao existe quantidade negativa de um nutriente
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/saied/Desktop/trabalho/wger/wger/nutrition/tests/test_ptoss2_tdd.py", line 31, in test_negative_macro_is_rejected
+    with self.assertRaisesRegex(ValueError, 'negative'):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
