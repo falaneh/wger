@@ -1,0 +1,30 @@
+Found 1 test(s).
+Creating test database for alias 'default'...
+
+
+F
+======================================================================
+FAIL: test_weight_below_minimum_is_an_error (wger.weight.tests.test_ptoss2_tdd.WeightCsvTddTestCase.test_weight_below_minimum_is_an_error)
+O modelo aceita de 30 kg a 600 kg: 29.99 vai para a lista de erros
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/saied/Desktop/trabalho/wger/wger/weight/tests/test_ptoss2_tdd.py", line 41, in test_weight_below_minimum_is_an_error
+    self.assertEqual([w.weight for w in weights], [Decimal('30')])
+AssertionError: Lists differ: [Decimal('29.99'), Decimal('30')] != [Decimal('30')]
+
+First differing element 0:
+Decimal('29.99')
+Decimal('30')
+
+First list contains 1 additional elements.
+First extra element 1:
+Decimal('30')
+
+- [Decimal('29.99'), Decimal('30')]
++ [Decimal('30')]
+
+----------------------------------------------------------------------
+Ran 1 test in 0.319s
+
+FAILED (failures=1)
+Destroying test database for alias 'default'...
