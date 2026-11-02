@@ -35,3 +35,7 @@ class IngredientValidationTddTestCase(SimpleTestCase):
         """-1 kcal passava: declarada e calculada ficam abaixo do minimo de 13 kcal"""
         with self.assertRaisesRegex(ValueError, 'negative'):
             make_data(energy=-1, protein=0.0).sanity_checks()
+
+    def test_negative_serving_has_no_grams(self):
+        """-1 l virava -1000 g"""
+        self.assertIsNone(Ingredient._derive_serving_size_gram(-1, 'l'))

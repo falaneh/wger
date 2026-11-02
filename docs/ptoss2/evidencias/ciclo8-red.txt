@@ -1,0 +1,17 @@
+Found 3 test(s).
+
+
+..F
+======================================================================
+FAIL: test_negative_serving_has_no_grams (wger.nutrition.tests.test_ptoss2_tdd.IngredientValidationTddTestCase.test_negative_serving_has_no_grams)
+-1 l virava -1000 g
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/saied/Desktop/trabalho/wger/wger/nutrition/tests/test_ptoss2_tdd.py", line 41, in test_negative_serving_has_no_grams
+    self.assertIsNone(Ingredient._derive_serving_size_gram(-1, 'l'))
+AssertionError: -1000 is not None
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=1)
