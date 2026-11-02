@@ -65,7 +65,12 @@ def parse_weight_csv(request, cleaned_data):
             # there is no existing weight entry in the database for that date
             unique_in_db = not duplicate_date_in_db
 
-            if unique_among_csv and unique_in_db and parsed_weight >= MIN_WEIGHT:
+            if (
+                unique_among_csv
+                and unique_in_db
+                and parsed_weight >= MIN_WEIGHT
+                and parsed_weight <= 600
+            ):
                 distinct_weight_entries.append((parsed_date, parsed_weight))
                 entry_dates.add(parsed_date)
             else:
