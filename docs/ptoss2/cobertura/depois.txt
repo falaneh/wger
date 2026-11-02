@@ -1,0 +1,8 @@
+Name                                  Stmts   Miss Branch BrPart  Cover   Missing
+---------------------------------------------------------------------------------
+wger/nutrition/api/filtersets.py         66     19     26      2    66%   56-61, 95, 120-139
+wger/nutrition/dataclasses.py            83      0     26      0   100%
+wger/nutrition/models/ingredient.py     199     19     50      9    88%   337, 394, 410, 414-415, 425, 436-438, 473, 538-545, 578, 596, 603
+wger/weight/helpers.py                   43      0     10      0   100%
+---------------------------------------------------------------------------------
+TOTAL                                   391     38    112     11    88%
