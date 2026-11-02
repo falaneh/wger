@@ -78,7 +78,7 @@ def parse_weight_csv(request, cleaned_data):
         except (ValueError, IndexError, decimal.InvalidOperation):
             error_list.append(row)
         row_count += 1
-        if row_count > MAX_ROW_COUNT:
+        if row_count >= MAX_ROW_COUNT:
             break
 
     # Create the valid weight entries
