@@ -1,0 +1,37 @@
+Found 182 test(s).
+** Generating 100 weight entries per user
+** Generating 100 weight entries per user
+   - generating for admin
+   - generating for test
+   - generating for demo
+   - generating for trainer1
+   - generating for trainer2
+   - generating for trainer3
+   - generating for trainer4
+   - generating for trainer5
+   - generating for manager1
+   - generating for manager2
+   - generating for manager3
+   - generating for general_manager1
+   - generating for general_manager2
+   - generating for member1
+   - generating for member2
+   - generating for member3
+   - generating for member4
+   - generating for member5
+   - generating for member6
+   - generating for member7
+   - generating for member8
+   - generating for member9
+   - generating for member10
+   - generating for member11
+Creating test database for alias 'default'...
+
+
+................................................................................................................WARNING 2026-11-02 15:49:18,512 serializers Could not generate thumbnails for image 1
+......................................................................
+----------------------------------------------------------------------
+Ran 182 tests in 10.726s
+
+OK
+Destroying test database for alias 'default'...
