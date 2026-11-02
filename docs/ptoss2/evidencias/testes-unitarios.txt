@@ -1,0 +1,105 @@
+test_invalid_lengths_are_not_a_barcode (wger.nutrition.tests.test_ptoss2_search_name.SearchNameBlackBoxTestCase.test_invalid_lengths_are_not_a_barcode)
+CE2, limites invalidos: vizinhos de cada tamanho valido ... ok
+test_text_finds_by_name (wger.nutrition.tests.test_ptoss2_search_name.SearchNameBlackBoxTestCase.test_text_finds_by_name)
+CE3: texto comum busca pelo nome ... ok
+test_text_without_match_is_empty (wger.nutrition.tests.test_ptoss2_search_name.SearchNameBlackBoxTestCase.test_text_without_match_is_empty)
+CE4: texto sem resultado ... ok
+test_valid_barcode_lengths_find_by_code (wger.nutrition.tests.test_ptoss2_search_name.SearchNameBlackBoxTestCase.test_valid_barcode_lengths_find_by_code)
+CE1, limites validos: 8, 12, 13 e 14 digitos ... ok
+test_decision_barcode_not_found_falls_back_to_name (wger.nutrition.tests.test_ptoss2_search_name.SearchNameWhiteBoxTestCase.test_decision_barcode_not_found_falls_back_to_name)
+Decisao `barcode_qs.exists()` falsa: procura no OFF e depois no nome ... ok
+test_mcdc_t1_digits_and_length (wger.nutrition.tests.test_ptoss2_search_name.SearchNameWhiteBoxTestCase.test_mcdc_t1_digits_and_length) ... ok
+test_mcdc_t2_length_ok_but_not_digits (wger.nutrition.tests.test_ptoss2_search_name.SearchNameWhiteBoxTestCase.test_mcdc_t2_length_ok_but_not_digits) ... ok
+test_mcdc_t3_digits_but_wrong_length (wger.nutrition.tests.test_ptoss2_search_name.SearchNameWhiteBoxTestCase.test_mcdc_t3_digits_but_wrong_length) ... ok
+test_ce1_decimal_point_and_comma_separator (wger.weight.tests.test_ptoss2_weight_csv.WeightCsvBlackBoxTestCase.test_ce1_decimal_point_and_comma_separator)
+CE1: separador virgula e decimal com ponto ... ok
+test_ce2_invalid_date (wger.weight.tests.test_ptoss2_weight_csv.WeightCsvBlackBoxTestCase.test_ce2_invalid_date)
+CE2: data fora do formato ... ok
+test_ce3_invalid_weight (wger.weight.tests.test_ptoss2_weight_csv.WeightCsvBlackBoxTestCase.test_ce3_invalid_weight)
+CE3: peso nao numerico ... ok
+test_ce4_missing_column (wger.weight.tests.test_ptoss2_weight_csv.WeightCsvBlackBoxTestCase.test_ce4_missing_column)
+CE4: linha sem a coluna do peso ... ok
+test_entries_belong_to_the_request_user (wger.weight.tests.test_ptoss2_weight_csv.WeightCsvBlackBoxTestCase.test_entries_belong_to_the_request_user)
+Saida: o registro criado pertence ao usuario da requisicao ... ok
+test_limit_inside_row_limit (wger.weight.tests.test_ptoss2_weight_csv.WeightCsvBlackBoxTestCase.test_limit_inside_row_limit)
+Limite: 999 linhas dentro do maximo sao todas lidas ... ok
+test_branch_sniffer_error_uses_excel_dialect (wger.weight.tests.test_ptoss2_weight_csv.WeightCsvWhiteBoxTestCase.test_branch_sniffer_error_uses_excel_dialect)
+Branch do except csv.Error: entrada vazia, sem delimitador detectavel ... ok
+test_mcdc_t1_valid_row (wger.weight.tests.test_ptoss2_weight_csv.WeightCsvWhiteBoxTestCase.test_mcdc_t1_valid_row) ... ok
+test_mcdc_t2_date_repeated_in_csv (wger.weight.tests.test_ptoss2_weight_csv.WeightCsvWhiteBoxTestCase.test_mcdc_t2_date_repeated_in_csv) ... ok
+test_mcdc_t3_date_already_in_database (wger.weight.tests.test_ptoss2_weight_csv.WeightCsvWhiteBoxTestCase.test_mcdc_t3_date_already_in_database) ... ok
+test_mcdc_t4_weight_zero (wger.weight.tests.test_ptoss2_weight_csv.WeightCsvWhiteBoxTestCase.test_mcdc_t4_weight_zero) ... ok
+test_ce1_ce5_singular_names_and_spellings (wger.nutrition.tests.test_ptoss2_serving_size.ServingSizeBlackBoxTestCase.test_ce1_ce5_singular_names_and_spellings)
+CE1+CE5: variacoes de grafia sao a mesma classe ... ok
+test_ce1_ce5_volume_units_are_converted (wger.nutrition.tests.test_ptoss2_serving_size.ServingSizeBlackBoxTestCase.test_ce1_ce5_volume_units_are_converted)
+CE1+CE5: quantidade positiva e unidade conhecida; uma por fator ... ok
+test_ce1_numeric_text_amount_is_accepted (wger.nutrition.tests.test_ptoss2_serving_size.ServingSizeBlackBoxTestCase.test_ce1_numeric_text_amount_is_accepted)
+CE1: numero em texto e convertido ... ok
+test_ce4_non_numeric_amount_returns_none (wger.nutrition.tests.test_ptoss2_serving_size.ServingSizeBlackBoxTestCase.test_ce4_non_numeric_amount_returns_none)
+CE4: texto que nao e numero cai no except ValueError ... ok
+test_ce6_unit_case_and_spaces_are_ignored (wger.nutrition.tests.test_ptoss2_serving_size.ServingSizeBlackBoxTestCase.test_ce6_unit_case_and_spaces_are_ignored)
+CE6: unidade com maiusculas e espacos e normalizada ... ok
+test_ce7_unknown_unit_returns_none (wger.nutrition.tests.test_ptoss2_serving_size.ServingSizeBlackBoxTestCase.test_ce7_unknown_unit_returns_none)
+CE7: unidade fora da tabela nao tem conversao ... ok
+test_limit_smallest_amount_that_rounds_to_one_gram (wger.nutrition.tests.test_ptoss2_serving_size.ServingSizeBlackBoxTestCase.test_limit_smallest_amount_that_rounds_to_one_gram)
+Valor limite: 0.5 ml e 0.6 ml em volta do arredondamento ... ok
+test_branch_type_error_in_conversion (wger.nutrition.tests.test_ptoss2_serving_size.ServingSizeWhiteBoxTestCase.test_branch_type_error_in_conversion)
+Branch do except: um tipo que float() recusa ... ok
+test_mcdc_t1_both_present (wger.nutrition.tests.test_ptoss2_serving_size.ServingSizeWhiteBoxTestCase.test_mcdc_t1_both_present) ... ok
+test_mcdc_t2_amount_missing (wger.nutrition.tests.test_ptoss2_serving_size.ServingSizeWhiteBoxTestCase.test_mcdc_t2_amount_missing) ... ok
+test_mcdc_t3_unit_missing (wger.nutrition.tests.test_ptoss2_serving_size.ServingSizeWhiteBoxTestCase.test_mcdc_t3_unit_missing) ... ok
+test_energy_above_the_tolerance_is_rejected (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksBlackBoxTestCase.test_energy_above_the_tolerance_is_rejected)
+D11: calculadas acima de 135 ... ok
+test_energy_below_the_tolerance_is_rejected (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksBlackBoxTestCase.test_energy_below_the_tolerance_is_rejected)
+D11: calculadas abaixo de 65 ... ok
+test_energy_on_the_tolerance_limits_is_allowed (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksBlackBoxTestCase.test_energy_on_the_tolerance_limits_is_allowed)
+D11, limites: declaradas 100 kcal aceitam de 65 a 135 calculadas ... ok
+test_macro_sum_above_the_limit_is_rejected (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksBlackBoxTestCase.test_macro_sum_above_the_limit_is_rejected)
+D8, limite: soma logo acima de 105 g ... ok
+test_macro_sum_on_the_limit_is_allowed (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksBlackBoxTestCase.test_macro_sum_on_the_limit_is_allowed)
+D8, limite: soma de exatamente 105 g ... ok
+test_name_is_truncated_at_200 (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksBlackBoxTestCase.test_name_is_truncated_at_200)
+Limite: 201 caracteres vira 200 ... ok
+test_name_with_200_is_kept (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksBlackBoxTestCase.test_name_with_200_is_kept)
+Limite: exatamente 200 fica igual ... ok
+test_optional_texts_are_truncated_when_present (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksBlackBoxTestCase.test_optional_texts_are_truncated_when_present)
+D2/D3 verdadeiras: marca e nome comum tambem sao cortados ... ok
+test_d10_mcdc_both_below_minimum_skip_the_check (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d10_mcdc_both_below_minimum_skip_the_check)
+D10 (A=F, B=F): 13 kcal declaradas, 0 calculadas: nao compara ... ok
+test_d10_mcdc_computed_above_minimum (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d10_mcdc_computed_above_minimum)
+D10 (A=F, B=T): 0 kcal declaradas, 14 calculadas: compara e rejeita ... ok
+test_d10_mcdc_declared_above_minimum (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d10_mcdc_declared_above_minimum)
+D10 (A=T, B=F): 14 kcal declaradas, 0 calculadas: compara e rejeita ... ok
+test_d1_empty_name_is_rejected (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d1_empty_name_is_rejected) ... ok
+test_d4_mcdc_value_none_is_allowed (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d4_mcdc_value_none_is_allowed)
+D4 (A=F): nutriente opcional ausente ... ok
+test_d4_mcdc_value_number_is_allowed (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d4_mcdc_value_number_is_allowed)
+D4 (A=T, B=F): valor presente e numerico ... ok
+test_d4_mcdc_value_text_is_rejected (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d4_mcdc_value_text_is_rejected)
+D4 (A=T, B=T): valor presente e nao numerico ... ok
+test_d5_mcdc_true_false_allowed (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d5_mcdc_true_false_allowed)
+D5 (A=T, B=F), tambem o limite exato de 100 ... ok
+test_d5_mcdc_true_true_rejected (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d5_mcdc_true_true_rejected)
+D5 (A=T, B=T) ... ok
+test_d5_mcdc_zero_short_circuits (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d5_mcdc_zero_short_circuits)
+D5 (A=F): zero nao passa na primeira condicao ... ok
+test_d6_mcdc_saturated_absent (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d6_mcdc_saturated_absent)
+D6 (A=F) ... ok
+test_d6_mcdc_saturated_greater (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d6_mcdc_saturated_greater)
+D6 (A=T, B=T) ... ok
+test_d6_mcdc_saturated_not_greater (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d6_mcdc_saturated_not_greater)
+D6 (A=T, B=F), com o limite saturada == gordura ... ok
+test_d7_mcdc_sugar_absent (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d7_mcdc_sugar_absent)
+D7 (A=F) ... ok
+test_d7_mcdc_sugar_greater (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d7_mcdc_sugar_greater)
+D7 (A=T, B=T) ... ok
+test_d7_mcdc_sugar_not_greater (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d7_mcdc_sugar_not_greater)
+D7 (A=T, B=F), com o limite acucar == carboidrato ... ok
+test_d9_mcdc_nutriscore_absent (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d9_mcdc_nutriscore_absent)
+D9 (A=F) ... ok
+test_d9_mcdc_nutriscore_invalid (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d9_mcdc_nutriscore_invalid)
+D9 (A=T, B=T) ... ok
+test_d9_mcdc_nutriscore_valid (wger.nutrition.tests.test_ptoss2_sanity_checks.SanityChecksWhiteBoxTestCase.test_d9_mcdc_nutriscore_valid)
+D9 (A=T, B=F) ... ok
+Ran 57 tests in 3.616s
+OK
