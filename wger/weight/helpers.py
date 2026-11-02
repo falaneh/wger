@@ -38,14 +38,22 @@ logger = logging.getLogger(__name__)
 MAX_ROW_COUNT = 1000
 
 
-def parse_weight_csv(request, cleaned_data):
-    try:
-        dialect = csv.Sniffer().sniff(cleaned_data['csv_input'], delimiters=';\t')
-    except csv.Error:
+def detect_csv_dialect(csv_input):
+    """
+    Detects the CSV dialect, preferring the delimiters that are not also used
+    as decimal separators, otherwise "80,5" would be split in two columns.
+    """
+    for delimiters in (';\t', None):
         try:
-            dialect = csv.Sniffer().sniff(cleaned_data['csv_input'])
+            return csv.Sniffer().sniff(csv_input, delimiters=delimiters)
         except csv.Error:
-            dialect = 'excel'
+            pass
+
+    return 'excel'
+
+
+def parse_weight_csv(request, cleaned_data):
+    dialect = detect_csv_dialect(cleaned_data['csv_input'])
 
     # csv.reader expects a file-like object, so use StringIO
     parsed_csv = csv.reader(io.StringIO(cleaned_data['csv_input']), dialect)
