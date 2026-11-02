@@ -1,0 +1,1 @@
+Sem refatoracao: incluir mais uma excecao na tupla ja existente nao cria duplicacao nem complexidade.
