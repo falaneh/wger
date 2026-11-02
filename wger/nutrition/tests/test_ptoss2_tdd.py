@@ -39,3 +39,7 @@ class IngredientValidationTddTestCase(SimpleTestCase):
     def test_negative_serving_has_no_grams(self):
         """-1 l virava -1000 g"""
         self.assertIsNone(Ingredient._derive_serving_size_gram(-1, 'l'))
+
+    def test_infinite_serving_has_no_grams(self):
+        """float('inf') levantava OverflowError em vez de devolver None"""
+        self.assertIsNone(Ingredient._derive_serving_size_gram(float('inf'), 'l'))
