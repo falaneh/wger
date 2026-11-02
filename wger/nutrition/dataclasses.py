@@ -97,14 +97,13 @@ class IngredientData:
             if value is not None and not isinstance(value, (int, float, Decimal)):
                 raise ValueError(f'Value for {field} is not a number: {value!r}')
 
-        if self.energy < 0:
-            raise ValueError(f'Value for energy is negative: {self.energy}')
+        for field in ['energy'] + macros:
+            value = getattr(self, field)
+            if value and value < 0:
+                raise ValueError(f'Value for {field} is negative: {value}')
 
         for macro in macros:
             value = getattr(self, macro)
-            if value and value < 0:
-                raise ValueError(f'Value for {macro} is negative: {value}')
-
             if value and value > 100:
                 raise ValueError(f'Value for {macro} is greater than 100: {value}')
 
