@@ -1,0 +1,1 @@
+Sem refatoracao: a mudanca sao duas linhas simples, sem duplicacao, e o nome da variavel ja deixa a intencao clara.
