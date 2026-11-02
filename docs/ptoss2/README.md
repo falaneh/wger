@@ -5,7 +5,7 @@ Branch: `ptoss2/testes-e-tdd`, criada a partir do `master`.
 ## Execução dos testes
 
 ```bash
-uv venv && uv pip install --group dev -e .   # ou use a .venv já criada
+uv sync   # instala as dependências na .venv
 
 # Testes do trabalho
 .venv/bin/python manage.py test \
