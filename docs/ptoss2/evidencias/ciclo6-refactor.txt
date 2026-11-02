@@ -1,0 +1,1 @@
+Sem refatoracao neste ciclo: ha um unico uso e a duplicacao so aparece no ciclo seguinte, com a energia.
