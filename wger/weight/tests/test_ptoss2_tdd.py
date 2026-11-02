@@ -40,3 +40,9 @@ class WeightCsvTddTestCase(WgerTestCase):
         weights, errors = self.parse('2031-01-01,29.99\n2031-01-02,30')
         self.assertEqual([w.weight for w in weights], [Decimal('30')])
         self.assertEqual(errors, [['2031-01-01', '29.99']])
+
+    def test_weight_above_maximum_is_an_error(self):
+        """600 e valido; 600.01 e Infinity vao para a lista de erros"""
+        weights, errors = self.parse('2031-01-01,600\n2031-01-02,600.01\n2031-01-03,Infinity')
+        self.assertEqual([w.weight for w in weights], [Decimal('600')])
+        self.assertEqual(errors, [['2031-01-02', '600.01'], ['2031-01-03', 'Infinity']])

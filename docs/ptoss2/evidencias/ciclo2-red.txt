@@ -1,0 +1,26 @@
+Found 2 test(s).
+Creating test database for alias 'default'...
+
+
+F.
+======================================================================
+FAIL: test_weight_above_maximum_is_an_error (wger.weight.tests.test_ptoss2_tdd.WeightCsvTddTestCase.test_weight_above_maximum_is_an_error)
+600 e valido; 600.01 e Infinity vao para a lista de erros
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/saied/Desktop/trabalho/wger/wger/weight/tests/test_ptoss2_tdd.py", line 47, in test_weight_above_maximum_is_an_error
+    self.assertEqual([w.weight for w in weights], [Decimal('600')])
+AssertionError: Lists differ: [Decimal('600'), Decimal('600.01'), Decimal('Infinity')] != [Decimal('600')]
+
+First list contains 2 additional elements.
+First extra element 1:
+Decimal('600.01')
+
+- [Decimal('600'), Decimal('600.01'), Decimal('Infinity')]
++ [Decimal('600')]
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.332s
+
+FAILED (failures=1)
+Destroying test database for alias 'default'...
