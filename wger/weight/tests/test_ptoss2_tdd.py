@@ -46,3 +46,13 @@ class WeightCsvTddTestCase(WgerTestCase):
         weights, errors = self.parse('2031-01-01,600\n2031-01-02,600.01\n2031-01-03,Infinity')
         self.assertEqual([w.weight for w in weights], [Decimal('600')])
         self.assertEqual(errors, [['2031-01-02', '600.01'], ['2031-01-03', 'Infinity']])
+
+    def test_only_1000_rows_are_read(self):
+        """O limite e de 1000 linhas: a linha 1001 nao e processada"""
+        rows = '\n'.join(
+            (datetime.date(2031, 1, 1) + datetime.timedelta(days=i)).isoformat() + ',80'
+            for i in range(1001)
+        )
+        weights, errors = self.parse(rows)
+        self.assertEqual(len(weights), 1000)
+        self.assertEqual(errors, [])
