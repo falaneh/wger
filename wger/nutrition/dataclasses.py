@@ -99,6 +99,9 @@ class IngredientData:
 
         for macro in macros:
             value = getattr(self, macro)
+            if value and value < 0:
+                raise ValueError(f'Value for {macro} is negative: {value}')
+
             if value and value > 100:
                 raise ValueError(f'Value for {macro} is greater than 100: {value}')
 
