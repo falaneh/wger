@@ -524,7 +524,7 @@ class Ingredient(AbstractLicenseModel, models.Model):
         try:
             gram = int(round(float(amount) * conversion[normalized_unit]))
             return gram if gram >= 0 else None
-        except (TypeError, ValueError):
+        except (OverflowError, TypeError, ValueError):
             return None
 
     @staticmethod
